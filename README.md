@@ -4,7 +4,7 @@
 
 ## Usage Instructions
 
-1. Using Docker, from the command line, build the image with `./0_buildimageandtag` and run the container with `1_run`
+1. Using Docker, from the command line, build the image with `./0_buildimageandtag` and run the container with `docker-compose up` from the directory that the docker-compose.yaml file exists.
 
 2. Test to ensure the CherryPy server is running with `./curltest.sh`
 
