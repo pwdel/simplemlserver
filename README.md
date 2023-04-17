@@ -1,6 +1,7 @@
 # Simple CherryPy ML Server
 
 * Creating a Simple Machine Learning Server with CherryPy
+* Blog post for this repo can be found [here](https://www.patdel.com/simple-ml-server/)
 
 ## Usage Instructions
 
