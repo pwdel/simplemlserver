@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  basic_mlpipeline_jupyternotebook:
+    image: python3p9bullseye/apiserver
+    build: .
+    container_name: python3p9bullseye-apiserver-container
+    # working_dir: /home/jovyan/work
+    #environment:
+    #  - PASSWORD=password
+    command:
+      - "/home/launch/start"
+    ports: 
+      - 8889:8889
+    volumes:
+      - type: bind
+        source: ./app
+        target: /home/app/
+      - type: bind
+        source: ./model/model.joblib
+        target: /home/app/model/model.joblib
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    tty: true
